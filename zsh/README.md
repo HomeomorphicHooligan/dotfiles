@@ -1,7 +1,6 @@
 <p align="center">
   <img src="images/logo.png" alt="ZSH">
 </p>
- # ZSH 
 
 ZSH is the most populat terminal shell, with the best comunity of the world. I normally use Zsh for everything.
 
@@ -28,7 +27,11 @@ If you use [Oh My ZSH](https://ohmyz.sh) the structure will be something similar
 ### Clonning the .zshrc
 If you just want to clone the `.zshrc` file, you can use this command:
 ```shell
-rm -rf ~/.zshrc && echo "$(curl -L https://raw.githubusercontent.com/pblcc/dotfiles/main/zsh/.zshrc)" >> ~/.zshrc
+rm -rf ~/.zshrc && echo "$(curl -L https://raw.githubusercontent.com/pblcc/dotfiles/main/zsh/.zshrc)" >> ~/.zshrc && source ~/.zshrc
+```
+Or execute the `clonerc.sh` script.
+```shell
+sh clonerc.sh
 ```
 
 ###### Limitations under the license
