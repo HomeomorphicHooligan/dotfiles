@@ -18,7 +18,7 @@ I use **Vundle-vim** as a plugin manager, you can read more about Vundle-vim in 
 <h2 align="center">About the repository</h2>                                                                                                  
 <p align="center">
   <img alt="GitHub watchers" src="https://img.shields.io/github/watchers/pblcc/dotfiles?style=social">
-  <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/pblcc/dotfilesstyle=social">
+  <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/pblcc/dotfiles?style=social">
 </p>
 
 Vim is made up of multiple files. **I have only uploaded to this repository those that I have configured to my liking**. Let's imagine a basic file structure on linux. With vim, it would be something like this:
