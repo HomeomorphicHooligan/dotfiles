@@ -1,5 +1,5 @@
 <p  align="center">
-  <img alt="..." src="https://raw.githubusercontent.com/PabloCorbCon/vim-config/main/images/vim-logo.png">
+  <img alt="..." src="images/vim-logo.png">
 </p>
 <h1 align="center">Vim Configuration</h1>
 <h3 align="center">My personal vim configuration files</h3>
@@ -7,9 +7,9 @@
   <img alt="Hex.pm" src="https://img.shields.io/hexpm/l/plug?color=green&label=LICENSE">
 </p>
   
-In this repository I will store all the **configuration files** that have relation with my **Vim text editor**. Vim is a very configurable console text editor, so it has different files that you can use to modify. You can learn more about Vim [here](https://www.vim.org/).
+In this folder I will store all the **configuration files** that have relation with my **Vim text editor**. Vim is a very configurable console text editor, so it has different files that you can use to modify. You can learn more about Vim [here](https://www.vim.org/).
 
-As an operating system, I use [Ubuntu 2](https://ubuntu.com), so some of the settings in this repository **may not work the same on different Linux distributions** or even on different operating systems.
+As an operating system, I use [Elementary OS](https://elementary.io), so some of the settings in this repository **may not work the same on different Linux distributions** or even on different operating systems.
 
 I use **Vundle-vim** as a plugin manager, you can read more about Vundle-vim in its GitHub [repository](https://github.com/VundleVim/Vundle.vim). You can also use another package manager like [vim-plug](https://github.com/junegunn/vim-plug).
 
@@ -17,8 +17,8 @@ I use **Vundle-vim** as a plugin manager, you can read more about Vundle-vim in 
 
 <h2 align="center">About the repository</h2>                                                                                                  
 <p align="center">
-  <img alt="GitHub watchers" src="https://img.shields.io/github/watchers/PabloCorbCon/vim-config?style=social">
-  <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/PabloCorbCon/vim-config?style=social">
+  <img alt="GitHub watchers" src="https://img.shields.io/github/watchers/pblcc/dotfiles?style=social">
+  <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/pblcc/dotfilesstyle=social">
 </p>
 
 Vim is made up of multiple files. **I have only uploaded to this repository those that I have configured to my liking**. Let's imagine a basic file structure on linux. With vim, it would be something like this:
@@ -54,17 +54,17 @@ You can set up this Vim configuration to your local machine. But you will need s
 Although you can download VIM on [windows](windows.com) / chrome OS systems, this repository does not provide a secure way of installation for these systems, simply for those based on [Unix](https: //en.wikipedia.org/wiki/Unix).
 Open a terminal and **run the following command**:
 ```shell
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/PabloCorbCon/vim-config/main/setup.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/pblcc/dotfiles/main/vim/setup.sh)"
 ```
 ###### Note: This setup.sh file is still in development and may generate some errors. 
 
 <h2 align="center">Look</h2>
 <p  align="center">
-  <img alt="..." src="https://raw.githubusercontent.com/PabloCorbCon/vim-config/main/images/vim-screen.png">
+  <img alt="..." src="images/vim-screen.png">
 </p>
 <h3 align="center">I use some plugins to autocomplete all the syntax I need</h3>
 <p  align="center">
-  <img alt="..." src="https://raw.githubusercontent.com/PabloCorbCon/vim-config/main/images/vim-autocode.png">
+  <img alt="..." src="images/vim-autocode.png">
 </p>
 
 I use the [dracula](https://github.com/dracula/dracula-theme) theme for vim. It's a dark theme with pastel colors.
