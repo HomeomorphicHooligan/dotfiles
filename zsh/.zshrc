@@ -50,3 +50,4 @@ alias remove-project="rm -rf ~/project"
 
 # Run  programs
 screenfetch
+source ~/.functions
