@@ -53,3 +53,67 @@ man() {
     LESS_TERMCAP_us="$(printf '\e[1;32m')" \
     man "$@"
 }
+
+# Query the wikipedia from the terminal to see the texts in the screen.
+#
+# Usage:
+#   wiki <words>
+#
+# Example:
+#   wiki Python programming language
+wiki() {
+  if ! [ -x "$(command -v links)" ]; then
+    echo "Links package is not installed"
+    sudo apt install links
+  fi
+  if ! [ -x "$(command -v wikipedia2text)" ]; then
+    echo "Wikipedia to text is not installed"
+    sudo apt-get install wikipedia2text
+  fi
+  wikipedia2text -p "$*"
+}
+
+# Create a new directory and move inside it
+m() {
+  mkdir -p "$@"
+  cd "$@" || exit
+}
+
+
+# Determine tthe size of a file or the total size of a directory
+# to avoid complex commands
+#
+# Usage:
+#   fs [directory][file]
+fs() {
+  if du -b /dev/null > /dev/null 2>&1; then
+    local arg=-sbh
+  else
+    local arg=-sh
+  fi
+  if [[ -n "$@" ]]; then
+    du $arg -- "$@"
+  else
+    du $arg -- .[^.]* *
+  fi
+}
+
+# Start an HTTP server from a directory, optionally specifying 
+# the port of it
+start-server(){
+  local port="${1:-8000}"
+  sleep 1
+  open "https://localhost:$port/"
+  # check if python is installed and open a socket on it. 
+  if ! [[ -x "$(command -v python3)" ]]; then
+    echo "Python is not installed"
+    exit 1
+  fi
+	python -c $'\
+import SimpleHTTPServer;\
+map = SimpleHTTPServer.SimpleHTTPRequestHandler.extensions_map;\
+map[""] = "text/plain";\
+for key, value in map.items():\
+  map[key] = value + ";charset=UTF-8";\
+SimpleHTTPServer.test();' "$port"
+}
