@@ -1,0 +1,8 @@
+[user]
+  emain = pablo.corbalan@protonmail.com
+  name = Pablo Corbalán 
+  email = pablo.corbalan@protonmail.co
+[credential]
+  helper = store
+[core]
+  editor = vim
