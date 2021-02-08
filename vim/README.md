@@ -71,21 +71,4 @@ I use the [dracula](https://github.com/dracula/dracula-theme) theme for vim. It'
 
 The font I use is fira code bold. You can check it at [this repository](https://github.com/tonsky/FiraCode).
 
-<h2 align="center">License</h2>
-
-This repoitory is under the Apache 2.0 License. You can read it in the license file.
-```
-Copyright 2020 - Pablo Corbalán 
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-``
-limitations under the License.
+###### Limitations under the License.
