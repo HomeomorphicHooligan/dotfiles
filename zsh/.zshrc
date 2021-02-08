@@ -8,11 +8,30 @@
 export ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="evan"
-plugins=(git)
 
+# Plugins of ZSH
+plugins=(
+  git
+  git-auto-fetch
+  history
+  sudo
+  pip
+  extract
+  catimg
+  python
+  zsh-autosuggestions
+  zsh-syntax-highlighting
+  alias-finder
+)
+
+# Plugins configuration
+GIT_AUTO_FETCH_INTERVAL=1200
+
+# Source OH MY ZSH
 source $ZSH/oh-my-zsh.sh
 
-alias zshconfig="mate ~/.zshrc"
+# Alias
+alias zshconfig="source ~/.zshrc"
 alias ohmyzsh="mate ~/.oh-my-zsh"
 alias l="ls -la"
 alias c="clear"
@@ -21,5 +40,7 @@ alias v="vim"
 alias p="python3"
 alias s="sudo"
 alias please="sudo su"
+alias pls="sudo su"
 
+# Run  programs
 screenfetch
