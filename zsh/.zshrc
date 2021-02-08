@@ -32,7 +32,8 @@ source $ZSH/oh-my-zsh.sh
 
 # Alias
 alias zshconfig="source ~/.zshrc"
-alias ohmyzsh="mate ~/.oh-my-zsh"
+alias ohmyzshconfig="source ~/.oh-my-zsh"
+alias functionsconfig="source ~/.functions"
 alias l="ls -la"
 alias c="clear"
 alias t="tree"

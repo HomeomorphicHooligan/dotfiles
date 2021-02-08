@@ -1,0 +1,55 @@
+#!bin/bash
+
+# This file constains some functions I've created using a bash script for my zsh 
+# terminal.
+#
+# More information at: github.com/pblcc/dotfiles
+#
+# Follow me on Twitter: @pablcorbcon
+
+
+# This function acts as a simple calculator, so that I don't have to open my
+# calculator to calculate basic operations.
+#
+# Usage:
+#   calc number1 operation number2
+calc() {
+  local result=""
+  result="$(printf "scale=10;%s\\n" "$*" | bc --mathlib | tr -d '\\\n')"
+  if [[ "$result" == *.* ]]; then
+  printf "%s" "$result" |
+    sed -e 's/^\./0./'  \
+    -e 's/^-\./-0./' \
+    -e 's/0*$//;s/\.$//'
+  else
+    printf "%s" "$result"
+  fi
+  printf "\\n"
+}
+
+# Source a configuration file (allways a dotfile) located at ~
+#
+# Usage:
+#   config file
+#
+# Example
+#   config zshrc == soure ~/.zshrc
+config(){
+  source "$HOME/.$1"
+}
+
+# Get the colors of the manual pages
+#
+# Usage:
+#   man <command>
+man() {
+  env \
+    LESS_TERMCAP_mb="$(printf '\e[1;31m')" \
+    LESS_TERMCAP_md="$(printf '\e[1;31m')" \
+    LESS_TERMCAP_me="$(printf '\e[0m')" \
+    LESS_TERMCAP_se="$(printf '\e[0m')" \
+    LESS_TERMCAP_so="$(printf '\e[1;44;33m')" \
+    LESS_TERMCAP_ue="$(printf '\e[0m')" \
+    LESS_TERMCAP_us="$(printf '\e[1;32m')" \
+    man "$@"
+}
