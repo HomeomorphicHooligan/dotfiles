@@ -41,6 +41,11 @@ alias p="python3"
 alias s="sudo"
 alias please="sudo su"
 alias pls="sudo su"
+# "work alias"
+alias project="cd ~/project && tree"
+alias new-project="rm -rf ~/project && mkdir ~/project && cd ~/project"
+alias clean-project="cd ~/project && rm -rf *"
+alias remove-project="rm -rf ~/project"
 
 # Run  programs
 screenfetch
