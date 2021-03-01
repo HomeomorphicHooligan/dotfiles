@@ -133,3 +133,13 @@ digga(){
 tre() {
 	tree -aC -I '.git' --dirsfirst "$@" | less -FRNX
 }
+
+# This function is used for adding an alias to the .zshrc file. Then it will restart 
+# ZSH to execute the alias.
+#
+# Usage: addalias name "command of the alias"
+addalias() {
+  filename="$HOME/github/dotfiles/zsh/.zshrc"
+  echo "alias $1='$2'" | tee -a $filename > /dev/null
+  source "$filename"
+}
