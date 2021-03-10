@@ -60,14 +60,13 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/pblcc/dotfiles/main/vim/se
 
 <h2 align="center">Look</h2>
 <p  align="center">
+  <img alt="..." src="images/vim.png">
   <img alt="..." src="images/vim-screen.png">
 </p>
 <h3 align="center">I use some plugins to autocomplete all the syntax I need</h3>
 <p  align="center">
   <img alt="..." src="images/vim-autocode.png">
 </p>
-
-I use the [dracula](https://github.com/dracula/dracula-theme) theme for vim. It's a dark theme with pastel colors.
 
 The font I use is fira code bold. You can check it at [this repository](https://github.com/tonsky/FiraCode).
 

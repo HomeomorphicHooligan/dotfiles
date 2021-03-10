@@ -22,11 +22,12 @@ Plugin 'hdima/python-syntax'                    " Specific syntax for Python
 Plugin 'sheerun/vim-polyglot'                   " Syntax for most modern programming languages
 Plugin 'mattn/emmet-vim'                        " Emmet for VIM (for web development)
 Plugin 'compnerd/arm64asm-vim'                  " Assembly .asm syntax
+Plugin 'vim-syntastic/syntastic'
 "--------------Autocompletion---------------------------
 Plugin 'davidhalter/jedi-vim'                   " The best autocompletion for VIM
 Plugin 'ervandew/supertab'                      " Complete code using the tab key instead of the arrows
 "-------------------Style-------------------------------
-Plugin 'dracula/vim', { 'name': 'dracula' }
+Plugin 'morhetz/gruvbox'
 Plugin 'sebmaynard/vim-ligatures'               " Simple ligatures for vim
 Plugin 'ehamberg/vim-cute-python'               " Really good ligatures for Vim, but just for Python files
 Plugin 'ryanoasis/vim-devicons'                 " File icons in the treefile explorer
@@ -37,7 +38,8 @@ call vundle#end()
 
 "=======================CONFIGURATION=============================
 " Change the color scheme
-colorscheme dracula
+set bg=dark
+colorscheme gruvbox
 " nerd Tree configuration
 map <C-k> :NERDTreeToggle<CR>
 let g:NERDTreeDirArrowExpandable = '→'
@@ -46,6 +48,15 @@ autocmd vimenter * NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | e
 " Select the windows using the dash key
 nmap - <Plug>(choosewin)
+" syntactic configuration
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 " Set compatibility to Vim only because this script will not work in 
 " the neovim editor
