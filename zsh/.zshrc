@@ -38,20 +38,35 @@ alias l="ls -la"
 alias c="clear"
 alias t="tree"
 alias v="vim"
-alias p="python3"
+alias p="python3.9"
 alias bp="bpython3"
 alias s="sudo"
 alias please="sudo su"
 alias pls="sudo su"
 alias vv="echo 'w'"
 alias r="rm -rf"
-alias django-start="python3 manage.py runserver"
+alias django-start="python3.9 manage.py runserver"
 # "work alias"
 alias project="cd ~/project && tree"
 alias new-project="rm -rf ~/project && mkdir ~/project && cd ~/project"
 alias clean-project="cd ~/project && rm -rf *"
-alias remove-project="rm -rf ~/project"
+alias remove-project="cd .. && rm -rf ~/project"
+alias copy='xclip -sel c < '
+alias olive='cd ~/yt && chmod +x olive.AppImage && ./olive'
+alias sa="sudo apt"
+alias sag="sudo apt get"
+alias sai='sudo apt install'
+alias sagi='sudo apt-get install'
+alias sagu="sudo apt-get update"
+alias proton='protonvpn-cli'
+alias proton-dsw='protonvpn-cli ks --off'
+alias proton-esw='protonvpn-cli ks --always-on'
 
-# Run  programs
-screenfetch
 source ~/.functions
+alias bwl='bitwarden list items'
+alias bws='chmod +x ~/.bw/bw.AppImage && cd ~/.bw/ && ./bw.AppImage'
+alias dotfiles=cd ~/github/dotfiles=''
+alias i='sudo dpkg -i'
+alias b='bash'
+alias wifi='nmcli dev wifi'
+alias mvgh='cd ~/github'
