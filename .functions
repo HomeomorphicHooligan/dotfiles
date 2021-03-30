@@ -143,3 +143,9 @@ addalias() {
   echo "alias $1='$2'" | tee -a $filename > /dev/null
   source "$filename"
 }
+
+# Is used to format a given location
+format() {
+  umount "$1"
+  mkfs.vfat "$1"
+}

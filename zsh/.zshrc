@@ -45,7 +45,6 @@ alias please="sudo su"
 alias pls="sudo su"
 alias vv="echo 'w'"
 alias r="rm -rf"
-alias django-start="python3.9 manage.py runserver"
 # "work alias"
 alias project="cd ~/project && tree"
 alias new-project="rm -rf ~/project && mkdir ~/project && cd ~/project"
@@ -70,3 +69,8 @@ alias i='sudo dpkg -i'
 alias b='bash'
 alias wifi='nmcli dev wifi'
 alias mvgh='cd ~/github'
+alias dja='django-admin'
+alias show='cat'
+alias etcher='cd ~/.balena && chmod +x etcher.AppImage && ./etcher.AppImage'
+alias space='lsblk'
+alias raspberry='mv ~/raspberry-pi && rpi-imager'
