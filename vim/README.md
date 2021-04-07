@@ -64,6 +64,7 @@ For using the configuration, run:
 ```shell
 git clone https://github.com/pablocorbalann/dotfiles.git pablo-dotfiles
 mv pablo-dotfiles/vim/.vimrc ~/.vimrc
+mv pablo-dotfiles/vim/plugins.vim ~/plugins.vim
 vim +c PluginInstall
 rm -rf pablo-dotfiles
 ```
