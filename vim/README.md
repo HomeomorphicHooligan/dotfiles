@@ -1,25 +1,38 @@
-<p  align="center">
-  <img alt="..." src="images/vim-logo.png">
-</p>
-<h1 align="center">Vim Configuration</h1>
-<h3 align="center">My personal vim configuration files</h3>
 <p align="center">
-  <img alt="Hex.pm" src="https://img.shields.io/hexpm/l/plug?color=green&label=LICENSE">
+  <img alt="..." src="images/vim.png">
+  <img alt="..." src="images/vim-screen.png">
 </p>
-  
+<p align="center"><img alt="..." src="images/vim-autocode.png"></p>
+
+# Vim
+### My Vim personal configuration
+
 In this folder I will store all the **configuration files** that have relation with my **Vim text editor**. Vim is a very configurable console text editor, so it has different files that you can use to modify. You can learn more about Vim [here](https://www.vim.org/).
 
-As an operating system, I use [Elementary OS](https://elementary.io), so some of the settings in this repository **may not work the same on different Linux distributions** or even on different operating systems.
+As an operating system, I use [Arch Linux](https://archlinux.org), so some of the settings in this repository **may not work the same on different Linux distributions** or even on different operating systems.
 
 I use **Vundle-vim** as a plugin manager, you can read more about Vundle-vim in its GitHub [repository](https://github.com/VundleVim/Vundle.vim). You can also use another package manager like [vim-plug](https://github.com/junegunn/vim-plug).
 
 ---
 
-<h2 align="center">About the repository</h2>                                                                                                  
-<p align="center">
-  <img alt="GitHub watchers" src="https://img.shields.io/github/watchers/pblcc/dotfiles?style=social">
-  <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/pblcc/dotfiles?style=social">
-</p>
+### Installing vim
+
+You'll need vim to run this configuration, check out [this page](https://vim.org). For example in Arch Linux:
+```shell
+sudo pacman -S vim
+```
+
+---
+
+### Installing Vundle Vim
+
+I use the vundle vim plugin manager, you'll have to install it using:
+
+```shell
+git clone https://github.com/VundleVim/Vunlde.vim.git ~/.vim/bundle/Vundle.vim
+```
+
+---
 
 Vim is made up of multiple files. **I have only uploaded to this repository those that I have configured to my liking**. Let's imagine a basic file structure on linux. With vim, it would be something like this:
 ```
@@ -36,37 +49,24 @@ You can check the structure of vim with a simple
 ```shell
 ls -la
 ```
-In this repository we have uploaded the following Vim files:
-| File | Description | Position |
-|------|-------------|----------|
-| `.vimrc` | The main configuration file for Vim | The root directory `~` |
-
-
-<h2 align="center">Set up</h2>
 
 You can set up this Vim configuration to your local machine. But you will need some **requisites**. Although Vim is 
 | Name | Version |Use | Links |
 |------|---------|----|-------|
 | Git  | n       | CLonning this repository | [git-scm.com](https://git-scm.com/) |
 | Vim  | 8+      | The Vim text editor itself | [vim.org](https://www.vim.org/) |
-| Bash | 3.2+    | Running the setup | [gnu.org/software/bash](https://www.gnu.org/software/bash/) |
 
-Although you can download VIM on [windows](windows.com) / chrome OS systems, this repository does not provide a secure way of installation for these systems, simply for those based on [Unix](https: //en.wikipedia.org/wiki/Unix).
-Open a terminal and **run the following command**:
+
+---
+
+### Using the configuration
+For using the configuration, run:
 ```shell
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/pblcc/dotfiles/main/vim/setup.sh)"
+git clone https://github.com/pablocorbalann/dotfiles.git pablo-dotfiles
+mv pablo-dotfiles/vim/.vimrc ~/.vimrc
+vim +c PluginInstall
+rm -rf pablo-dotfiles
 ```
-###### Note: This setup.sh file is still in development and may generate some errors. 
-
-<h2 align="center">Look</h2>
-<p  align="center">
-  <img alt="..." src="images/vim.png">
-  <img alt="..." src="images/vim-screen.png">
-</p>
-<h3 align="center">I use some plugins to autocomplete all the syntax I need</h3>
-<p  align="center">
-  <img alt="..." src="images/vim-autocode.png">
-</p>
 
 The font I use is fira code bold. You can check it at [this repository](https://github.com/tonsky/FiraCode).
 
