@@ -29,10 +29,12 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 For running the configuration you will have to ruIf you just want the configuration, you can run:
 ```shell
 git clone https://github.com/pablocorbalann/dotfiles pablo-dotfiles
-cd pablo-dotfiles/
-cp -r zsh/ ~/zsh
+cp -r pablo-dotfiles/zsh/ ~/zsh
 cd ~/zsh
 mv * ../
+mv ../.zshrc ../.zshrc-old
+mv .zshrc ../
+mv .zshenv ../
 source ~/.zshrc
 ```
 
