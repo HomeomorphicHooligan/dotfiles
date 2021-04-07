@@ -1,0 +1,42 @@
+# This file stores all the aliases of zsh
+# github.com/pablocorbalann/dotfiles
+alias zshconfig="source ~/.zshrc"
+alias ohmyzshconfig="source ~/.oh-my-zsh"
+alias functionsconfig="source ~/.functions"
+alias l="ls -la"
+alias c="clear"
+alias t="tree"
+alias v="vim"
+alias p="python3.9"
+alias bp="bpython3"
+alias s="sudo"
+alias please="sudo su"
+alias pls="sudo su"
+alias vv="echo 'w'"
+alias r="rm -rf"
+alias project="cd ~/project && tree"
+alias new-project="rm -rf ~/project && mkdir ~/project && cd ~/project"
+alias clean-project="cd ~/project && rm -rf *"
+alias remove-project="cd .. && rm -rf ~/project"
+alias copy='xclip -sel c < '
+alias olive='cd ~/yt && chmod +x olive.AppImage && ./olive'
+alias sa="sudo apt"
+alias sag="sudo apt get"
+alias sai='sudo apt install'
+alias sagi='sudo apt-get install'
+alias sagu="sudo apt-get update"
+alias proton='protonvpn-cli'
+alias proton-dsw='protonvpn-cli ks --off'
+alias proton-esw='protonvpn-cli ks --always-on'
+alias bwl='bitwarden list items'
+alias bws='chmod +x ~/.bw/bw.AppImage && cd ~/.bw/ && ./bw.AppImage'
+alias dotfiles=cd ~/github/dotfiles=''
+alias i='sudo dpkg -i'
+alias b='bash'
+alias wifi='nmcli dev wifi'
+alias mvgh='cd ~/github'
+alias dja='django-admin'
+alias show='cat'
+alias etcher='cd ~/.balena && chmod +x etcher.AppImage && ./etcher.AppImage'
+alias space='lsblk'
+alias raspberry='mv ~/raspberry-pi && rpi-imager'

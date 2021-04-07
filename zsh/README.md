@@ -6,32 +6,36 @@ ZSH is the most populat terminal shell, with the best comunity of the world. I n
 
 In this folder I'm going to store the important configuration files of **my Zsh** shell.
 
-### Using this configuration
-Right now if you want to use my Zsh configuration, you will have to download the files by hand. Maybe in the future I will program a small shell script to automate the process.
+---
 
-If you use [Oh My ZSH](https://ohmyz.sh) the structure will be something similar to:
-```
-/home/<user>
-| ...
-| .zshrc
-| .zshenv
-| ...
-| /.oh-my-zsh/
-| | ...
-| | /custom/
-| | | ...
-| | | /themes/
-| | | | ...
-| | | | evan.zsh-theme
-```
-### Clonning the .zshrc
-If you just want to clone the `.zshrc` file, you can use this command:
+### Installing zsh (as default shell)
+For installing ZSH, run the command for your linux distribution, for example in Arch Linux:
 ```shell
-rm -rf ~/.zshrc && echo "$(curl -L https://raw.githubusercontent.com/pblcc/dotfiles/main/zsh/.zshrc)" >> ~/.zshrc && source ~/.zshrc
+sudo pacman -S zsh
 ```
-Or execute the `clonerc.sh` script.
+You can find the command for your distribution [here](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH)
+
+---
+
+### Installing oh-my-zsh
+For running the configuration is recommended [oh-my-zsh](https://ohmyz.sh/), for installing it run:
 ```shell
-sh clonerc.sh
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
+
+---
+
+### Clonning the configuration
+For running the configuration you will have to ruIf you just want the configuration, you can run:
+```shell
+git clone https://github.com/pablocorbalann/dotfiles pablo-dotfiles
+cd pablo-dotfiles/
+cp -r zsh/ ~/zsh
+cd ~/zsh
+mv * ../
+source ~/.zshrc
+```
+
+---
 
 ###### Limitations under the license
