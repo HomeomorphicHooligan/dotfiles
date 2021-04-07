@@ -5,7 +5,7 @@
 filetype plugin indent on
 
 "=======================PLUGINS================================
-source ~/.plugins.vim
+source ~/plugins.vim
 
 " Set compatibility to Vim only because this script will not work in 
 " the neovim editor
