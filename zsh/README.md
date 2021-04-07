@@ -31,7 +31,8 @@ For running the configuration you will have to ruIf you just want the configurat
 git clone https://github.com/pablocorbalann/dotfiles pablo-dotfiles
 cp -r pablo-dotfiles/zsh/ ~/zsh
 cd ~/zsh
-mv * ../
+mv alias.zsh ../
+mv plugins.zsh ../
 mv ../.zshrc ../.zshrc-old
 mv .zshrc ../
 mv .zshenv ../
