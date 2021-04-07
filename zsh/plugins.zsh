@@ -11,15 +11,5 @@ plugins=(
   python
   zsh-autosuggestions
   zsh-syntax-highlighting
-  alias-finde git
-  git-auto-fetch
-  history
-  sudo
-  pip
-  extract
-  catimg
-  python
-  zsh-autosuggestions
-  zsh-syntax-highlighting
   alias-finder
 )
