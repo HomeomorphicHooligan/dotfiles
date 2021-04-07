@@ -8,10 +8,10 @@ export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="evan"
 
 # Plugins
-source "plugins.zsh"
+source ~/plugins.zsh
 # Source OH MY ZSH
 source $ZSH/oh-my-zsh.sh
 # Alias
-source "alias.zsh"
+source ~/alias.zsh
 # Functions
 source ~/.functions
