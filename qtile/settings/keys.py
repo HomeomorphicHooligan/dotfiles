@@ -49,14 +49,14 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     # Browser
     ([mod], "b", lazy.spawn("firefox")),
     # File Explorer
-    ([mod], "e", lazy.spawn("pcmanfm")),
+    ([mod], "e", lazy.spawn("ranger")),
     # Terminal
     ([mod], "Return", lazy.spawn("alacritty")),
     # Redshift
     ([mod], "r", lazy.spawn("redshift -O 2400")),
     ([mod, "shift"], "r", lazy.spawn("redshift -x")),
     # Screenshot
-    ([mod], "s", lazy.spawn("scrot")),
+    ([mod], "s", lazy.spawn("import -window root '%Y-%M-%D%:%H.png'"))
 
     # ------------ Hardware Configs ------------
     # Volume

@@ -1,36 +1,36 @@
-# Qtile
+<p align="center">
+  <img src="images/qtile.png">
+</p>
 
-![Qtile](../../.screenshots/qtile.png)
+# Qtile (TWM)
+Qtile is a tiling window manager (WM) that has been programmed in Python, it's also configurated using PYthon.
 
-***Language***
-- [🇪🇸 Español](./README.es.md)
-- 🇺🇸 English
+###### Thanks to [@antoniosarosi](https://github.com/antoniosarosi) because most of the configuration is actually based on his.
 
-## Installation (Arch based)
+---
 
-Install Qtile and dependencies:
+### Installation of Qtile (arch)
 
+You have to install the Qtile tiling manager for using this configuration.
 ```
 sudo pacman -S qtile pacman-contrib
 yay -S nerd-fonts-ubuntu-mono
 pip install psutil
 ```
 
+---
+
+### Using the configuration
+
 Clone this repository and copy my configs:
 
 ```bash
-git clone https://github.com/antoniosarosi/dotfiles.git
-cp -r dotfiles/.config/qtile ~/.config
+git clone https://github.com/pablocorbalann/dotfiles.git pablo-dotfiles
+cp -r pablo-dotfiles/dotfiles/.config/qtile ~/.config
+rm -rf pablo-dotfiles/
 ```
 
-Test it with **[Xephyr](https://wiki.archlinux.org/index.php/Xephyr)**:
-
-```bash
-Xephyr -br -ac -noreset -screen 1280x720 :1 &
-DISPLAY=:1 qtile
-```
-
-If the network widget doesn't work check ```./settings/widgets.py``` and look
+If the network widget doesn't work check `./settings/widgets.py` and look
 for this line, you should find it inside a list called *primary_widgets*:
 
 ```python
@@ -38,17 +38,9 @@ for this line, you should find it inside a list called *primary_widgets*:
  widget.Net(**base(bg='color3'), interface='wlp2s0'),
 ```
 
-Once that's done, you can login. But keep in mind keybindings will not work
-unless you have the same programs that I use and the same configs. You can
-either change keybindings or install the software I use and my config files,
-check out [this section](https://github.com/antoniosarosi/dotfiles#keybindings)
-for instructions.
+### Structure
 
-## Structure
-
-In ```config.py```, which is the file where most people write all their config,
-I only have an *autostart* function and some other variables like
-*cursor_warp*.
+In `config.py`, which is the file where most people write all their config, I only have an *autostart* function and some other variables like
 
 ```python
 @hook.subscribe.startup_once
@@ -56,7 +48,7 @@ def autostart():
     subprocess.call([path.join(qtile_path, 'autostart.sh')])
 ```
 
-If you want to change *autostart* programs, open  ```./autostart.sh```.
+If you want to change *autostart* programs, open  `./autostart.sh`
 
 ```bash
 #!/bin/sh
@@ -67,15 +59,15 @@ cbatticon -u 5 &
 volumeicon &
 ```
 
-If you want to modify keybindings, open ```./settings/keys.py```. To modify
-workspaces, use ```./settings/groups.py```. Finally, if you want to add more
-layouts, check ```./settings/layouts.py```, the rest of files don't need any
+If you want to modify keybindings, open `./settings/keys.py`. To modify
+workspaces, use `./settings/groups.py`. Finally, if you want to add more
+layouts, check `./settings/layouts.py`, the rest of files don't need any
 configuration.
 
 ## Themes
 
-To set a theme, check which ones are available in ```./themes```, and write
-the name of the theme you want in a file named ```./config.json```:
+To set a theme, check which ones are available in `./themes`, and write
+the name of the theme you want in a file named `./config.json`:
 
 ```json
 {

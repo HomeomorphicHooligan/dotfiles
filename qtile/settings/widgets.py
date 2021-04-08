@@ -32,7 +32,7 @@ def powerline(fg="light", bg="dark"):
     )
 
 
-def workspaces(): 
+def workspaces():
     return [
         separator(),
         widget.GroupBox(
@@ -85,7 +85,7 @@ primary_widgets = [
 
     icon(bg="color3", text=' '),  # Icon: nf-fa-feed
     
-    widget.Net(**base(bg='color3'), interface='wlp2s0'),
+    widget.Net(**base(bg='color3')),
 
     powerline('color2', 'color3'),
 
@@ -124,7 +124,7 @@ secondary_widgets = [
 
 widget_defaults = {
     'font': 'UbuntuMono Nerd Font Bold',
-    'fontsize': 14,
-    'padding': 1,
+    'fontsize': 12,
+    'padding': 2,
 }
 extension_defaults = widget_defaults.copy()
