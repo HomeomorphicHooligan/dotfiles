@@ -1,4 +1,4 @@
-
+<p align="center"><img src="images/zsh.png"></p>
 # ZSH
 
 ZSH is the most populat terminal shell, with the best comunity of the world. I normally use Zsh for everything.
