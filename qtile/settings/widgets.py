@@ -26,7 +26,7 @@ def icon(fg='text', bg='dark', fontsize=16, text="?"):
 def powerline(fg="light", bg="dark"):
     return widget.TextBox(
         **base(fg, bg),
-        text="", # Icon: nf-oct-triangle_left
+        text=" ", # Icon: nf-oct-triangle_left
         fontsize=37,
         padding=-2
     )
@@ -123,7 +123,7 @@ secondary_widgets = [
 ]
 
 widget_defaults = {
-    'font': 'UbuntuMono Nerd Font Bold',
+    'font': 'UbuntuMono Nerd Font',
     'fontsize': 12,
     'padding': 2,
 }

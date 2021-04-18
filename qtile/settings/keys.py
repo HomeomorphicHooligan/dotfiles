@@ -34,8 +34,8 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     # Close the window
     ([mod], "q", lazy.window.kill()),
     # Switch focus of monitors
-    ([mod], "period", lazy.next_screen()),
-    ([mod], "comma", lazy.prev_screen()),
+    ([mod], "z", lazy.next_screen()),
+    ([mod], "z", lazy.prev_screen()),
     # Restart Qtile
     ([mod, "control"], "r", lazy.restart()),
     ([mod, "control"], "q", lazy.shutdown()),
@@ -51,12 +51,12 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     # File Explorer
     ([mod], "e", lazy.spawn("ranger")),
     # Terminal
-    ([mod], "Return", lazy.spawn("alacritty")),
+    ([mod], "t", lazy.spawn("alacritty")),
     # Redshift
     ([mod], "r", lazy.spawn("redshift -O 2400")),
     ([mod, "shift"], "r", lazy.spawn("redshift -x")),
     # Screenshot
-    ([mod], "s", lazy.spawn("import -window root '%Y-%M-%D%:%H.png'"))
+    ([mod], "s", lazy.spawn("scrot ~/screenshots/%Y-%m-%d-%T-screenshot.png ")),
 
     # ------------ Hardware Configs ------------
     # Volume

@@ -1,8 +1,4 @@
-# Antonio Sarosi
-# https://youtube.com/c/antoniosarosi
-# https://github.com/antoniosarosi/dotfiles
-
-# Multimonitor support
+WALLPAPER_ROUTE = "/home/pablo/.config/qtile/wallpaper.txt"
 
 from libqtile.config import Screen
 from libqtile import bar
@@ -14,9 +10,17 @@ import subprocess
 def status_bar(widgets):
     return bar.Bar(widgets, 24, opacity=0.95)
 
+w_name = ""
+with open(WALLPAPER_ROUTE, "r") as f:
+    w_name = f.read().strip()
+
+w_route = f"/home/pablo/wallpapers/wallpapers/full-hd/{w_name}".strip()
+
+print("w_name: ", w_name)
+print("The path of the wallpaper is: ", w_route)
 
 screens = [Screen(top=status_bar(primary_widgets),
-                  wallpaper="/etc/wallpaper.jpg",
+                  wallpaper=w_route,
                   wallpaper_mode='strech')]
 
 xrandr = "xrandr | grep -w 'connected' | cut -d ' ' -f 2 | wc -l"
