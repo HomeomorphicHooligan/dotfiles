@@ -11,5 +11,4 @@ plugins=(
   python
   zsh-autosuggestions
   zsh-syntax-highlighting
-  alias-finder
 )

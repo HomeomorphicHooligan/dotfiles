@@ -15,3 +15,6 @@ source $ZSH/oh-my-zsh.sh
 source ~/alias.zsh
 # Functions
 source ~/.functions
+
+layout es
+neofetch
