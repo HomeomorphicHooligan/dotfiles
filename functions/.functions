@@ -139,7 +139,7 @@ tre() {
 #
 # Usage: addalias name "command of the alias"
 addalias() {
-  filename="$HOME/github/dotfiles/zsh/.zshrc"
+  filename="$HOME/alias.zsh"
   echo "alias $1='$2'" | tee -a $filename > /dev/null
   source "$filename"
 }
@@ -148,4 +148,11 @@ addalias() {
 format() {
   umount "$1"
   mkfs.vfat "$1"
+}
+
+# Moves to an specific project (located at $1), all
+# the projects are located in the ~/projects/ folder
+projects() {
+  cd ~/projects/$1
+  ls -la
 }
